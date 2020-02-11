@@ -1,0 +1,13 @@
+div(id = "figure")
+    img(src="images/headline-locations.jpg" alt="Image")
+
+div
+    a(href="locations.html" class="locations") Locations
+
+    div
+        for idx in locations
+            dl
+                dt #{idx.name}
+                dd #{idx.address}
+                dd #{idx.phone}
+                dd #{idx.hours}

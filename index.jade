@@ -1,0 +1,20 @@
+div(id="figure")
+    img(src="images/headline-home.jpg" alt="Image")
+    span(id="home") Camde Grounds is the best darn coffee in the world!
+        a(href="about.html") Find out why.
+
+div(id="featured")
+    span(class="whatshot")
+        a(href="menu.html") Find out more
+
+div
+    //- coffeeKeys = Object.keys(public.coffees._data);
+
+    //- for(var x = 0; x < Math.min(coffeeKeys.length, 3); x++)
+    //- for    
+        var coffee = public.coffees._data[coffeeKeys[x]]
+        a(href="/coffee/#{coffeeKeys[x]}.html")
+        img(src="/images/#{coffee.image}" alt="#{coffee.name}")
+    for coffee in public.coffees._data
+        a(href="/coffees/#{coffee.url}.html")
+            img(src="/images/#{coffee.image}" alt="#{coffee.name}")
